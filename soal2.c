@@ -27,10 +27,10 @@ int main(){
         printf("LEVEL %d: ", i);
         if(i % 2 != 0){
             for(int j = prev+(i*2)-1; j>0; j--){
-                if(j != 0){
+                if(j != 1){
                 printf("%d ", arr[j]);
                 }
-                else if(j == 0){
+                else if(j == 1){
                 printf("%d", arr[j]);
                 }        
             }
