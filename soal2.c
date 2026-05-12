@@ -6,6 +6,7 @@ int main(){
     int x = 1;
     int level = 0;
     int prev = 1;
+    int bef;
 
     scanf("%d", &N);
 
@@ -14,11 +15,21 @@ int main(){
     }
 
     // check banyak level
-    while(N > 2*x-x){
+    while(N >= 2*x){
         level++;
+        bef = 2*x;
         x = 2*x;
     }
-    level = level+1;
+    level = level + 1;
+    // if(N > bef && N < ){
+    //     level = level+1;
+    // }
+
+    // if(N > bef && N < 2*x){
+    //     level = level-1;
+    // }
+
+    // printf("%d", level);
 
     printf("LEVEL 0: %d\n", arr[0]);
     
