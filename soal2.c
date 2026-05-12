@@ -1,3 +1,12 @@
+/** EL2008 Praktikum Pemecahan Masalah dengan Pemrograman 2024/2025
+ *   Modul               : 5 - soal 2
+ *   Hari dan Tanggal    : Selasa, 12 Mei 2026
+ *   Nama (NIM)          : Kenneth Harrison Siswanto (13224032)
+ *   Nama File           : Modul5.c
+ *   Deskripsi           : Membuat output zigzag dari sebuah tree
+ * 
+ */
+
 #include <stdio.h>
 
 int main(){
