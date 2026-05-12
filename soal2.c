@@ -36,10 +36,10 @@ int main(){
             }
         } else {
             for(int k = prev; k < prev+(i*2); k++){ 
-                if(k != prev+(i*2)){
+                if(k != prev+(i*2)-1){
                 printf("%d ", arr[k]);
                 }
-                else if(k == prev+(i*2)){
+                else if(k == prev+(i*2)-1){
                 printf("%d", arr[k]);
                 }                    
             }
