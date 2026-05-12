@@ -14,7 +14,7 @@ int main(){
     }
 
     // check banyak level
-    while(N > 2*x){
+    while(N > 2*x-x){
         level++;
         x = 2*x;
     }
@@ -26,7 +26,8 @@ int main(){
     for(int i=1; i<level; i++){
         printf("LEVEL %d: ", i);
         if(i % 2 != 0){
-            for(int j = prev+(i*2)-1; j>0; j--){
+            if(N < prev+(i*2)-1){
+            for(int j = N-1; j>0; j--){
                 if(j != 1){
                 printf("%d ", arr[j]);
                 }
@@ -34,12 +35,22 @@ int main(){
                 printf("%d", arr[j]);
                 }        
             }
+            } else {
+                for(int j = prev+(i*2)-1; j>0; j--){
+                if(j != 1){
+                printf("%d ", arr[j]);
+                }
+                else if(j == 1){
+                printf("%d", arr[j]);
+                }        
+            }
+            } 
         } else {
-            for(int k = prev; k < prev+(i*2); k++){ 
-                if(k != prev+(i*2)-1){
+            for(int k = prev; k < prev+(i*2) && k < N; k++){ 
+                if(k != prev+(i*2)-1 || k != N-1){
                 printf("%d ", arr[k]);
                 }
-                else if(k == prev+(i*2)-1){
+                else if(k == prev+(i*2)-1 || k != N-1){
                 printf("%d", arr[k]);
                 }                    
             }
